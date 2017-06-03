@@ -1,0 +1,81 @@
+/***********************
+* Sticky Footer Foo
+*************************/
+
+.site-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.sticky-footer-wrapper {
+  flex: 1;
+}
+
+/****************************
+* Style Post Summaries
+*****************************/
+
+div.summary {
+  max-width: 750px;
+  margin: 0 40px 20px 40px;
+  font-size: 0.8em;
+  color: Cornsilk;
+}
+
+
+/***************************
+* PosT Category and Tag Lists
+****************************/
+
+.category-and-tags {
+  text-align: center;
+}
+
+/*************************************************
+ *  Sharing
+ * (modified from Hugo Academic theme: https://github.com/gcushen/hugo-academic)
+ **************************************************/
+
+ul.sharing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+  padding: 0;
+}
+
+ul.sharing li {
+  display: inline-flex;
+  margin-right: 5px;
+  list-style-type: none;
+}
+
+ul.sharing li:last-of-type {
+  margin-right: 0;
+}
+
+ul.sharing li .fa {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  transition: all 150ms ease-in-out;
+  color: #fff;
+}
+
+ul.sharing li a {
+  background-color: #b5c6ce;
+  display: block;
+  border-radius: 50%;
+  text-decoration: none !important;
+  margin: 0;
+}
+
+ul.sharing li:hover .fa {
+  transform: scale(1.4)
+}

@@ -1,0 +1,14 @@
+name = "Sublime Hugo for Blogdown"
+license = "MIT"
+licenselink = "//github.com/homerhanumat/sublimer-hugo/LICENSE.MD"
+description = "hugo theme"
+homepage = "//github.com/homerhanumat/sublimer-hugo"
+tags = ["blog", "minimal", "syntax highlighting", "dev"]
+features = ["MathJax", "sharing"]
+min_version = 0.17
+
+# Ported from:
+[original]
+  name = "Mathieu Mayer-Mazzoli"
+  homepage = "//mx3m.github.io"
+  repo = "//github.com/mx3m/hikari-for-Jekyll"

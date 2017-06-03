@@ -1,0 +1,100 @@
+{{ partial "head" . }}
+<body>
+    
+    <!-- {{ partial "off-canvas" . }} -->
+
+    {{ partial "header" . }}
+    
+    <div class="site-wrapper" id="full-wrapper">
+        
+        <section class="single-wrap sticky-footer-wrapper">
+            <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+                <div class="feat">
+                    <h5 class="page-date">
+                    <time datetime="" itemprop="datePublished">
+                    {{ .Date.Format "02 January 2006" }}
+                   <!--  {{ if .Params.location }}
+                        <span>
+                            {{ .Params.location }}
+                        </span>
+                    {{ end }} -->
+                    </time>
+                    </h5>
+                </div>
+                <h1 class="page-title" itemprop="name headline">{{ .Title }}</h1>
+                
+                
+  <div class = "category-and-tags" >            
+  {{ if isset $.Params "categories" }}
+  {{ $categoriesLen := len $.Params.categories }}
+  {{ if gt $categoriesLen 0 }}
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    {{ range $k, $v := $.Params.categories }}
+    <a href="{{ "/categories/" | relLangURL }}{{ . | urlize | lower }}">{{ . }}</a
+    >{{ if lt $k (sub $categoriesLen 1) }}, {{ end }}
+    {{ end }}
+  </span>
+  {{ end }}
+  {{ end }}
+
+  {{ if isset $.Params "tags" }}
+  {{ $tagsLen := len $.Params.tags }}
+  {{ if gt $tagsLen 0 }}
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    {{ range $k, $v := $.Params.tags }}
+    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize | lower }}">{{ . }}</a
+    >{{ if lt $k (sub $tagsLen 1) }}, {{ end }}
+    {{ end }}
+  </span>
+  {{ end }}
+{{ end }}
+
+  </div>
+                
+              {{ partial "sharing" . }}  
+              
+                <div itemprop="articleBody">
+                    {{ .Content }}                    
+                </div>
+                
+                 
+                
+                <div class="feat share">
+                </div>
+                
+                {{ template "_internal/disqus.html" . }}
+                
+            </article>
+        </section>
+        
+    <div class="next-prev-arrows">
+        {{ if .NextInSection }}
+            <a rel="next" href="{{ .NextInSection.Permalink }}" id="next">
+                &larr; <span class="nav-title nav-title-next">{{ .NextInSection.Title }}</span> 
+            </a>
+        {{ end }}
+        {{ if .PrevInSection }}
+            <a rel="prev" href="{{ .PrevInSection.Permalink }}" id="prev">
+                 <span class="nav-title nav-title-prev">{{ .PrevInSection.Title }}</span> &rarr;
+            </a>
+        {{ end }}
+    </div>
+        {{ partial "footer" . }}
+    </div>
+
+
+
+    {{ partial "js" . }}
+    
+    <!-- LaTeX math rendering -->
+    {{ if or .Params.math .Site.Params.math }}
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+    {{ end }}
+    
+</body>
+</html>

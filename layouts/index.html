@@ -1,0 +1,18 @@
+{{ partial "head" . }}
+<body>
+      {{ partial "off-canvas" . }}
+
+      <a class="menu-icon" title="Menu"><span class="lines"></span></a>
+
+      {{ partial "header" . }}
+      <div class="site-wrapper">
+        <div class="sticky-footer-wrapper">
+          {{ partial "post-list" . }}
+          {{ partial "pagination" . }}
+        </div>
+        {{ partial "footer" . }}
+      </div>
+    
+    {{ partial "js" . }}
+</body>
+</html>

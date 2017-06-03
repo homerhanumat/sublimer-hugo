@@ -1,0 +1,122 @@
+# This file sets default configuration for your site as a whole.
+
+# You don't need to change this for Netlify deployment, but
+# it's still good practice to do so:
+baseurl = "https://homerhanumat.rbind.io/"
+# remember trailing / at end of baseurl
+languageCode = "en-us"
+
+# choose a good title for your site:
+title = "SublimeR Hugo"
+
+# Enable comments by entering your Disqus shortname
+# (Sign up at https://disqus.com/):
+# disqusShortname = ""
+
+# Enable Google Analytics by entering your tracking code
+# googleAnalytics = ""
+paginate = 50
+theme = "sublime-hugo-theme"
+
+[permalinks]
+	post = "/:year/:month/:day/:slug"
+
+[params]
+	name = "Homer White"
+	
+	# The following appears in the <meta> tag by default (unless
+	# overriden by description: "whatever you like" in YAML front-matter
+	# of a post):
+	description = "Tweak of Sublime Hugo theme for blogdown"
+	
+	# The following material will appear in the footer:
+	copyright = "License:  MIT"
+	
+	sharing = true
+	showsummaries = true
+	
+	# store off-canvas logo-image in static/img:
+	logo = "offcanvas-shot.jpg"
+	# The higher the %, the more rounded the corners:
+	logoborderradius = "10%"
+	
+	# enable MathJax on all pages by default?
+	math = false
+	
+	# for an individual page you can set 
+	# math: true
+	# in YAML front-matter, if you plan to write math.
+
+	# Custom assets can be linked with their paths relative to static/
+	custom_css = []
+	custom_js  = []
+
+	# Links to newer/older blog posts
+	newer = "Newer"
+	older = "Older"
+  
+  # This determines what appears on the 404 Error page:
+	pageNotFoundTitle = "Page not found"
+	pageNotFoundSubtitle = "The requested page was not <br> found on the server."
+
+[params.offcanvas]
+	# Menu items
+	title = "Hello, I'm Homer White"
+	bio = "I teach mathematics and computer science at a small liberal arts college in Kentucky.  In the summer I hack at garden hedges and front ends."
+	# Another biographical paragraph, if you like:
+	bio2 = ""
+	subscribe = "Subscribe"
+	followme = "Contact/Follow"
+
+	# Enable Google search of your site:
+	search_enabled = true
+	search = "Search"
+
+	# The following parameters govern which social-media links will appear
+	# on the off-canvas.  These links to YOUR sites/accounts.
+	# Hence you provide your usernames.
+	
+	[[params.offcanvas.socialnetworks]]
+	
+	  # The text for the link to your email:
+		name = "Email"
+		# put your email here:
+		url = "mailto:person@example.com"
+		
+		# replace "homerhanumat" with your github username:
+		github = "homerhanumat"
+		
+		# If you want to link to your FB page, provide your username here.
+		# (It's at the end of your FB page URL.)
+		facebook = ""
+		
+		# Your twitter handle, if you like (minus the @):
+		twitter = ""
+		
+		# for Google Plus, provide URL fragment after the +:
+		googleplus = ""
+		
+		# LinkedIn, username is at end of URL:
+		linkedin = ""
+		
+# Taxonomies.
+[taxonomies]
+
+  # if you assign tags or categories to a post, they will be
+  # shown after the post title.
+  # Use categories for subject-matter, tags for key words or concepts.
+  # Examples of use in YAML front matter:
+  # tags: ["predator", "evolution"]
+  # categories: ["biology"]
+  
+  tag = "tags"
+  category = "categories"
+  
+  # You can also assign one or more aggregators to a post.
+  # For example, in YAML front matter you could have the line:
+  # aggregators: ["code-hostel"]
+  # This isn't shown to the reader, but the groupin still exists.
+  # Thus you have an RSS feed for code-hostel with a URL like this:
+  # https://yoursite.com/aggregators/code-hostel/index.xml
+  
+  aggregator = "aggregators"
