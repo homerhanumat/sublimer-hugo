@@ -11,5 +11,11 @@ Features added so far:
 * Sharing option for posts
 * Option to show post summaries
 
+To use:
+
+```
+blogdown::new_site(theme = "homerhanumat/sublimer-hugo")
+```
+
 Feedback is welcome:  just open an Issue.
 
