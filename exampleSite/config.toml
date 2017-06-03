@@ -36,7 +36,7 @@ theme = "sublime-hugo-theme"
 	showsummaries = true
 	
 	# store off-canvas logo-image in static/img:
-	logo = "offcanvas-shot.jpg"
+	logo = "Gender Neutral User-80.svg"
 	# The higher the %, the more rounded the corners:
 	logoborderradius = "10%"
 	
