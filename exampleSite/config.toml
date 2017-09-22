@@ -1,4 +1,5 @@
 # This file sets default configuration for your site as a whole.
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 # You don't need to change this for Netlify deployment, but
 # it's still good practice to do so:
