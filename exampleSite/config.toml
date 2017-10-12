@@ -4,7 +4,7 @@ relativeurls = true
 
 # You don't need to change this for Netlify deployment, but
 # it's still good practice to do so:
-baseurl = "https://homerhanumat.rbind.io/"
+baseurl = "http://www.example.com"
 # remember trailing / at end of baseurl
 languageCode = "en-us"
 
@@ -63,8 +63,11 @@ theme = "sublime-hugo-theme"
 
 [params.offcanvas]
 	# Menu items
-	title = "Hello, I'm Homer White"
-	bio = "I teach mathematics and computer science at a small liberal arts college in Kentucky.  In the summer I hack at garden hedges and front ends."
+	title = "Hello, I'm Jane Doe"
+	bio = """\
+	      Here you can put a little information \
+	      about yourself.\
+	      """
 	# Another biographical paragraph, if you like:
 	bio2 = ""
 	subscribe = "Subscribe"
