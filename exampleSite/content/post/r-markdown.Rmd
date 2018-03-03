@@ -15,7 +15,7 @@ summary: "If you want *summaries* but don't like the default, then **put one her
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
-# R Markdown
+## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -32,7 +32,7 @@ You can do math.  Here is some displayed math:
 $$ x^2 + y^2 = z^2. $$
 Inline math, such as the formula $A = 2\pi r^2$ for the area of a circle, is also easy to produce.
 
-# Including Plots
+## Including Plots
 
 You can also embed plots. See Figure \@ref(fig:pie) for example:
 
@@ -45,3 +45,12 @@ pie(
   init.angle = -50, border = NA
 )
 ```
+
+## Tables
+
+Use `knitr::kable()` for tables:
+
+```{r}
+knitr::kable(mtcars[, 1:3])
+```
+
