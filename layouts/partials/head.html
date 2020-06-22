@@ -16,7 +16,7 @@
     <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
     {{ end }}
     
-    {{ .Hugo.Generator }}
+    {{ hugo.Generator }}
 
     {{ "<!-- Stylesheets -->" | safeHTML }}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/smooth-scrollbar.css" />
